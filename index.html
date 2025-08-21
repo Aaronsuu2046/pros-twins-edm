@@ -5,24 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>PROS Twins – 數位孿生 × AI 訓練</title>
   <style>
-    /* === Basic reset for email === */
-    body { margin:0; padding:0; background:#f4f6f8; }
-    img { border:0; outline:none; text-decoration:none; display:block; }
-    a { text-decoration:none; }
+    /* ===== Base ===== */
+    html,body{margin:0;padding:0;background:#f4f6f8;}
+    img{border:0;outline:none;text-decoration:none;display:block;max-width:100%;height:auto;}
+    a{text-decoration:none;}
+    table{border-collapse:collapse;}
+    /* Typography */
+    .h1{font-size:28px;line-height:1.3;font-weight:800;color:#0a0f1a;margin:0;}
+    .h2{font-size:22px;line-height:1.35;font-weight:800;color:#0a0f1a;margin:0;}
+    .lead{font-size:16px;line-height:1.7;color:#344056;margin:0;}
+    .kpi{font-size:28px;font-weight:800;color:#0b76ff;text-align:center;}
     /* Buttons */
-    .btn { background:#0b76ff; color:#ffffff !important; padding:14px 22px; border-radius:8px; font-weight:700; display:inline-block; }
-    .btn-outline { background:#ffffff; color:#0b76ff !important; padding:12px 20px; border:2px solid #0b76ff; border-radius:8px; font-weight:700; display:inline-block; }
-    /* Headings */
-    .h1 { font-size:28px; line-height:1.3; font-weight:800; color:#0a0f1a; }
-    .h2 { font-size:20px; line-height:1.4; font-weight:800; color:#0a0f1a; }
-    .lead { font-size:16px; line-height:1.7; color:#344056; }
-    .kpi { font-size:28px; font-weight:800; color:#0b76ff; }
-    /* Mobile tweaks */
-    @media only screen and (max-width:620px){
-      .container { width:100% !important; }
-      .px-32 { padding-left:18px !important; padding-right:18px !important; }
-      .stack { display:block !important; width:100% !important; }
-      .hero-title { font-size:24px !important; }
+    .btn{background:#0b76ff;color:#fff !important;padding:14px 22px;border-radius:10px;font-weight:700;display:inline-block;}
+    .btn-outline{background:#fff;color:#0b76ff !important;padding:12px 20px;border:2px solid #0b76ff;border-radius:10px;font-weight:700;display:inline-block;}
+    /* Container card */
+    .container{width:600px;max-width:600px;background:#ffffff;border-radius:14px;overflow:hidden;box-shadow:0 4px 16px rgba(10,15,26,0.06);}
+    .px-32{padding-left:32px;padding-right:32px;}
+    .stack{ }
+    .hero-title{font-size:30px;font-weight:900;}
+    /* Mobile-first tweaks */
+    @media (max-width:620px){
+      .container{width:100% !important;}
+      .px-32{padding-left:18px !important;padding-right:18px !important;}
+      .stack{display:block !important;width:100% !important;}
+      .hero-title{font-size:24px !important;}
+      .h2{font-size:20px;}
+      .lead{font-size:15px;line-height:1.8;}
+      .btn,.btn-outline{display:block !important;width:100% !important;text-align:center !important;padding:14px 18px;}
+      .cta-right{text-align:left !important;padding-top:12px !important;} /* CTA 按鈕改到下方左對齊 */
+      .icon-td{padding-right:0 !important;margin-bottom:14px;}
     }
   </style>
 </head>
@@ -31,37 +42,31 @@
   <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#f4f6f8">
     <tr>
       <td align="center" style="padding:24px 12px;">
-        <!-- Container -->
-       <table role="presentation" class="container" width="600" cellspacing="0" cellpadding="0" border="0"
-        style="width:600px; max-width:600px;
-         background: url('https://drive.google.com/uc?export=view&id=1vg5bcKmTKy9LbSGoGAG_OEKA-73vLeHH') no-repeat center center;
-         background-size: cover;
-         border-radius:14px;
-         overflow:hidden;
-         box-shadow:0 4px 16px rgba(10,15,26,0.06);">
 
-          <!-- Hero -->
+        <!-- Container -->
+        <table role="presentation" class="container" width="600" cellspacing="0" cellpadding="0" border="0"
+          style="background:#ffffff url('https://drive.google.com/uc?export=view&id=1vg5bcKmTKy9LbSGoGAG_OEKA-73vLeHH') no-repeat center center;background-size:cover;">
+
+          <!-- Hero（覆層讓文字對比更清楚） -->
           <tr>
-            <td background="https://via.placeholder.com/1200x480/121926/ffffff?text=PROS+Twins+%7C+Digital+Twin+%C3%97+AI" bgcolor="#121926" style="background-size:cover; background-position:center;">
+            <td bgcolor="#121926">
               <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:rgba(18,25,38,0.78);">
                 <tr>
-                  <td class="px-32" style="padding:36px 32px;">
-                    <img src="https://drive.google.com/thumbnail?id=1tBBIc-yBoFUYA99m2P_tjDw84DICqv-i&sz=w512" width="153" height="105" alt="PAIA Logo"/>
+                  <td class="px-32" style="padding:24px 32px 8px;">
+                    <!-- Logo：只給寬度，避免變形 -->
+                    <img src="https://drive.google.com/uc?export=view&id=1tBBIc-yBoFUYA99m2P_tjDw84DICqv-i"
+                         alt="PAIA Logo" width="140" style="height:auto;max-width:100%;margin:0;">
                   </td>
                 </tr>
                 <tr>
-                  <td class="px-32" style="padding:0 32px 36px 32px;">
-                    <div class="h1 hero-title" style="color:#ffffff; font-size:30px; font-weight:900;">PROS Twins – 虛實整合的 AI 數位孿生平台</div>
-                    <div class="lead" style="color:#e6ebf2; margin-top:8px;">讓 AI 學習更快速，讓產業應用更貼近</div>
+                  <td class="px-32" style="padding:0 32px 28px 32px;">
+                    <div class="h1 hero-title" style="color:#ffffff;">PROS Twins – 虛實整合的 AI 數位孿生平台</div>
+                    <div class="lead" style="color:#e6ebf2;margin-top:8px;">讓 AI 學習更快速，讓產業應用更貼近</div>
                     <div style="height:16px;"></div>
-                    <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                       <tr>
-                        <!--<td><a class="btn" href="https://example.com/demo" target="_blank" rel="noopener">立即預約 DEMO</a></td>
-                        <td width="12"></td>-->
-                        <td>
-                          <a class="btn-outline" href="mailto:service@paia-tech.com">
-                            聯絡我們
-                          </a>
+                        <td style="text-align:left;">
+                          <a class="btn-outline" href="mailto:service@paia-tech.com">聯絡我們</a>
                         </td>
                       </tr>
                     </table>
@@ -73,66 +78,57 @@
 
           <!-- Why PROS -->
           <tr>
-            <td class="px-32" style="padding:28px 32px;">
+            <td class="px-32" style="padding:24px 32px;">
               <div class="h2" style="text-align:center;">企業與教育的共同挑戰</div>
-              <div style="height:10px;"></div>
+              <div style="height:12px;"></div>
               <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
                 <tr>
-                  <td class="stack" width="33.33%" valign="top" style="text-align:center; padding-right:12px;">
-                    <img src="https://drive.google.com/thumbnail?id=1nJhZuNfGGacJSpVHIMtVxTpuGWkrOxyv&sz=w512" width="80" height="80" alt="成本圖示" style="display:block; margin:0 auto;"/>
-                    <div class="lead" style="margin-top:8px; text-align:center;">設備訓練成本高</div>
+                  <td class="stack icon-td" width="33.33%" valign="top" style="text-align:center;padding-right:12px;">
+                    <img src="https://drive.google.com/uc?export=view&id=1nJhZuNfGGacJSpVHIMtVxTpuGWkrOxyv" width="80" alt="成本圖示" style="margin:0 auto;">
+                    <div class="lead" style="margin-top:8px;text-align:center;">設備訓練成本高</div>
                   </td>
-                  <td class="stack" width="33.33%" valign="top" style="text-align:center; padding-right:12px;">
-                    <img src="https://drive.google.com/thumbnail?id=1i7kqTnl5HGnVgE0yHjuEOWdDZbGMXVR9&sz=w512" width="80" height="80" alt="時程圖示" style="display:block; margin:0 auto;"/>
-                    <div class="lead" style="margin-top:8px; text-align:center;">AI 驗證週期長</div>
+                  <td class="stack icon-td" width="33.33%" valign="top" style="text-align:center;padding-right:12px;">
+                    <img src="https://drive.google.com/uc?export=view&id=1i7kqTnl5HGnVgE0yHjuEOWdDZbGMXVR9" width="80" alt="時程圖示" style="margin:0 auto;">
+                    <div class="lead" style="margin-top:8px;text-align:center;">AI 驗證週期長</div>
                   </td>
-                  <td class="stack" width="33.33%" valign="top" style="text-align:center;">
-                    <img src="https://drive.google.com/thumbnail?id=1LYRo3ez4pdwHu7G8gzBD7vQOQhTUCri9&sz=w512" width="80" height="80" alt="人員圖示" style="display:block; margin:0 auto;"/>
-                    <div class="lead" style="margin-top:8px; text-align:center;">人才培訓效率低</div>
+                  <td class="stack icon-td" width="33.33%" valign="top" style="text-align:center;">
+                    <img src="https://drive.google.com/uc?export=view&id=1LYRo3ez4pdwHu7G8gzBD7vQOQhTUCri9" width="80" alt="人員圖示" style="margin:0 auto;">
+                    <div class="lead" style="margin-top:8px;text-align:center;">人才培訓效率低</div>
                   </td>
                 </tr>
               </table>
             </td>
           </tr>
 
-
           <!-- Solution -->
           <tr>
-            <td style="padding:0 32px;">
-              <hr style="border:none; border-top:1px solid #e8edf3;"/>
-            </td>
+            <td style="padding:0 32px;"><hr style="border:none;border-top:1px solid #e8edf3;"/></td>
           </tr>
           <tr>
-            <td class="px-32" style="padding:24px 32px; text-align:center;">
+            <td class="px-32" style="padding:22px 32px;text-align:center;">
               <div class="h2">PROS Twins 解決方案</div>
               <div style="height:8px;"></div>
               <div class="lead">數位孿生 × AI 訓練 × 教育培訓</div>
               <div style="height:16px;"></div>
-          
-              <!-- 圖片在上 -->
-              <img src="https://drive.google.com/thumbnail?id=1YJKPYF9QhiCLPszDl6UJJaXIp24Sj_qf&sz=w512" 
-                 width="520" height="280" alt="數位孿生建模示意"/>
-          
+              <img src="https://drive.google.com/uc?export=view&id=1YJKPYF9QhiCLPszDl6UJJaXIp24Sj_qf" width="520" alt="數位孿生建模示意" style="margin:0 auto;">
               <div style="height:16px;"></div>
-          
-              <!-- 文字在下 -->
-              <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:8px 16px; max-width:600px; margin:0 auto;">
-                <div style="flex:0 0 48%; min-width:260px; text-align:left; line-height:1.7; font-size:15px; color:#344056;">
+
+              <!-- 左二右二並排（手機自動堆疊） -->
+              <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:10px 16px;max-width:600px;margin:0 auto;">
+                <div style="flex:0 0 48%;min-width:260px;text-align:left;line-height:1.7;font-size:15px;color:#344056;">
                   <strong>數位孿生建模：</strong>1:1 還原真實環境
                 </div>
-                <div style="flex:0 0 48%; min-width:260px; text-align:left; line-height:1.7; font-size:15px; color:#344056;">
+                <div style="flex:0 0 48%;min-width:260px;text-align:left;line-height:1.7;font-size:15px;color:#344056;">
                   <strong>虛實雙向部署：</strong>虛擬驗證 → 實體落地
                 </div>
-                <div style="flex:0 0 48%; min-width:260px; text-align:left; line-height:1.7; font-size:15px; color:#344056;">
+                <div style="flex:0 0 48%;min-width:260px;text-align:left;line-height:1.7;font-size:15px;color:#344056;">
                   <strong>AI 模型訓練：</strong>支援監督式與強化學習
                 </div>
-                <div style="flex:0 0 48%; min-width:260px; text-align:left; line-height:1.7; font-size:15px; color:#344056;">
+                <div style="flex:0 0 48%;min-width:260px;text-align:left;line-height:1.7;font-size:15px;color:#344056;">
                   <strong>人才培育：</strong>從學生到工程師一站式學習
                 </div>
               </div>
 
-
-          
               <div style="height:14px;"></div>
               <a class="btn-outline" href="mailto:service@paia-tech.com">與我們合作</a>
             </td>
@@ -140,27 +136,25 @@
 
           <!-- Use Cases -->
           <tr>
-            <td style="padding:0 32px;">
-              <hr style="border:none; border-top:1px solid #e8edf3;"/>
-            </td>
+            <td style="padding:0 32px;"><hr style="border:none;border-top:1px solid #e8edf3;"/></td>
           </tr>
           <tr>
-            <td class="px-32" style="padding:24px 32px; text-align:center">
+            <td class="px-32" style="padding:22px 32px;text-align:center;">
               <div class="h2">跨領域的應用價值</div>
               <div style="height:8px;"></div>
               <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
                 <tr>
                   <td class="stack" width="50%" valign="top" style="padding-right:12px;">
-                    <div class="lead" style="font-weight:700; margin-bottom:6px;">產業應用</div>
-                    <ul style="margin:0; padding-left:18px; color:#344056; line-height:1.7; font-size:15px;">
+                    <div class="lead" style="font-weight:700;margin-bottom:6px;">產業應用</div>
+                    <ul style="margin:0;padding-left:18px;color:#344056;line-height:1.7;font-size:15px;text-align:left;display:inline-block;max-width:280px;">
                       <li>智慧搬運車、倉儲路徑優化</li>
                       <li>自動檢測、生技製造模擬</li>
                       <li>無人車模擬、交通管理</li>
                     </ul>
                   </td>
                   <td class="stack" width="50%" valign="top">
-                    <div class="lead" style="font-weight:700; margin-bottom:6px;">教育應用</div>
-                    <ul style="margin:0; padding-left:18px; color:#344056; line-height:1.7; font-size:15px;">
+                    <div class="lead" style="font-weight:700;margin-bottom:6px;">教育應用</div>
+                    <ul style="margin:0;padding-left:18px;color:#344056;line-height:1.7;font-size:15px;text-align:left;display:inline-block;max-width:280px;">
                       <li>AI 素養課程、程式教育營隊</li>
                       <li>企業內訓、轉型課程</li>
                       <li>數位孿生 × 機器人實作</li>
@@ -173,20 +167,18 @@
 
           <!-- Impact -->
           <tr>
-            <td style="padding:0 32px; text-align:center">
-              <hr style="border:none; border-top:1px solid #e8edf3;"/>
-            </td>
+            <td style="padding:0 32px;"><hr style="border:none;border-top:1px solid #e8edf3;"/></td>
           </tr>
           <tr>
-            <td class="px-32" style="padding:24px 32px;">
+            <td class="px-32" style="padding:22px 32px;text-align:center;">
               <div class="h2">預期成效（Based on Internal Testing）</div>
-              <div style="height:16px;"></div>
+              <div style="height:12px;"></div>
               <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
                 <tr>
-                  <td class="stack" width="33.33%" valign="top" style="text-align:center; padding-right:12px;">
+                  <td class="stack" width="33.33%" valign="top" style="text-align:center;padding-right:12px;">
                     <div class="lead">訓練週期縮短</div>
                   </td>
-                  <td class="stack" width="33.33%" valign="top" style="text-align:center; padding-right:12px;">                    
+                  <td class="stack" width="33.33%" valign="top" style="text-align:center;padding-right:12px;">
                     <div class="lead">硬體成本可降低</div>
                   </td>
                   <td class="stack" width="33.33%" valign="top" style="text-align:center;">
@@ -197,26 +189,22 @@
             </td>
           </tr>
 
-          <!-- CTA -->
+          <!-- CTA（左文右按鈕；手機時自動堆疊） -->
           <tr>
-            <td style="padding:0 32px;">
-              <hr style="border:none; border-top:1px solid #e8edf3;"/>
-            </td>
+            <td style="padding:0 32px;"><hr style="border:none;border-top:1px solid #e8edf3;"/></td>
           </tr>
           <tr>
-            <td class="px-32" style="padding:24px 32px 32px;">
-              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#f8fbff" style="background:#f8fbff; border:1px solid #e3eefc; border-radius:12px;">
+            <td class="px-32" style="padding:22px 32px 28px;">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#f8fbff" style="background:#f8fbff;border:1px solid #e3eefc;border-radius:12px;">
                 <tr>
-                  <td style="padding:22px;">
+                  <td style="padding:18px;">
                     <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
                       <tr>
-                        <!-- 左側文字 -->
-                        <td style="text-align:left; vertical-align:middle;">
-                          <div class="h2">讓您的 AI 訓練與產業應用更快落地！</div>
-                          <div class="lead" style="margin-top:6px;">立即聯繫我們應用規劃。</div>
+                        <td class="stack" style="text-align:left;vertical-align:middle;">
+                          <div class="h2" style="margin:0;">讓您的 AI 訓練與產業應用更快落地！</div>
+                          <div class="lead" style="margin-top:6px;text-align:left;">立即聯繫我們應用規劃。</div>
                         </td>
-                        <!-- 右側按鈕 -->
-                        <td style="text-align:right; vertical-align:middle;">
+                        <td class="stack cta-right" style="text-align:right;vertical-align:middle;">
                           <a class="btn-outline" href="mailto:service@paia-tech.com" target="_blank" rel="noopener">Email 洽詢</a>
                         </td>
                       </tr>
@@ -227,27 +215,23 @@
             </td>
           </tr>
 
-
           <!-- Footer -->
           <tr>
-            <td style="padding:16px 32px 28px; background:#ffffff;">
+            <td style="padding:16px 32px 24px;background:#ffffff;">
               <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
                 <tr>
-                  <td class="lead" style="font-size:12px; color:#7a8699;">
+                  <td class="lead" style="font-size:12px;color:#7a8699;">
                     帕亞科技｜PROS Twins 數位孿生平台<br/>
-                    官方網站：<a href="https://www.paia-tech.com/" target="_blank" style="color:#0b76ff;">paia-tech.com</a> ｜ 聯絡信箱：<a href="service@paia-tech.com" style="color:#0b76ff;">service@paia-tech.com</a>
+                    官方網站：<a href="https://www.paia-tech.com/" target="_blank" style="color:#0b76ff;">paia-tech.com</a> ｜ 聯絡信箱：<a href="mailto:service@paia-tech.com" style="color:#0b76ff;">service@paia-tech.com</a>
                   </td>
-                  <!--<td align="right">
-                    <img src="https://via.placeholder.com/88x88?text=QR" width="88" height="88" alt="聯絡我們 QR"/>
-                  </td>-->
                 </tr>
-                <tr><td colspan="2" style="height:8px;"></td></tr>
-                
               </table>
             </td>
           </tr>
+
         </table>
         <!-- /Container -->
+
       </td>
     </tr>
   </table>
