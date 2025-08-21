@@ -80,24 +80,32 @@
             <td class="px-32" style="padding:24px 32px;">
               <div class="h2" style="text-align:center;">企業與教育的共同挑戰</div>
               <div style="height:12px;"></div>
-              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
-                <tr>
-                  <td class="stack icon-td" width="33.33%" valign="top" style="text-align:center;padding-right:12px;">
-                    <img src="./assets/icon-cost.png" width="80" alt="成本圖示" style="margin:0 auto;">
-                    <div class="lead" style="margin-top:8px;text-align:center;">設備訓練成本高</div>
-                  </td>
-                  <td class="stack icon-td" width="33.33%" valign="top" style="text-align:center;padding-right:12px;">
-                    <img src="./assets/icon-time.png" width="80" alt="時程圖示" style="margin:0 auto;">
-                    <div class="lead" style="margin-top:8px;text-align:center;">AI 驗證週期長</div>
-                  </td>
-                  <td class="stack icon-td" width="33.33%" valign="top" style="text-align:center;">
-                    <img src="./assets/icon-people.png" width="80" alt="人員圖示" style="margin:0 auto;">
-                    <div class="lead" style="margin-top:8px;text-align:center;">人才培訓效率低</div>
-                  </td>
-                </tr>
-              </table>
+          
+              <!-- Flexbox 取代 table -->
+              <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
+          
+                <!-- icon1 -->
+                <div style="flex:1; min-width:100px; text-align:center;">
+                  <img src="./assets/icon-cost.png" width="80" alt="成本圖示" style="margin:0 auto;">
+                  <div class="lead" style="margin-top:8px;">設備訓練成本高</div>
+                </div>
+          
+                <!-- icon2 -->
+                <div style="flex:1; min-width:100px; text-align:center;">
+                  <img src="./assets/icon-time.png" width="80" alt="時程圖示" style="margin:0 auto;">
+                  <div class="lead" style="margin-top:8px;">AI 驗證週期長</div>
+                </div>
+          
+                <!-- icon3 -->
+                <div style="flex:1; min-width:100px; text-align:center;">
+                  <img src="./assets/icon-people.png" width="80" alt="人員圖示" style="margin:0 auto;">
+                  <div class="lead" style="margin-top:8px;">人才培訓效率低</div>
+                </div>
+          
+              </div>
             </td>
           </tr>
+
 
           <!-- Solution -->
           <tr>
